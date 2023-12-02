@@ -8,12 +8,32 @@ body {
   font-family: sans-serif;
 }
 
+h1.repo-title {
+  padding: 16px;
+  margin: 0;
+}
+
 header {
   display: flex;
+  padding: 16px;
+  gap: 16px;
 }
 
 main {
   display: flex;
+}
+
+div.total-amount {
+  padding: 16px;
+}
+
+div.total-amount h3 {
+  padding: 0;
+  margin: 0;
+}
+
+div.total-amount a {
+  font-size: 14px;
 }
 
 .input-group input {
@@ -62,4 +82,10 @@ span.circle {
   border-radius: 50%;
   background-color: #000;
   margin-right: 8px;
+}
+
+.ot-item {
+  padding: 16px;
+  margin-bottom: 8px;
+  background-color: #eee;
 }

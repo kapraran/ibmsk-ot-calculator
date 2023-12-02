@@ -1,5 +1,5 @@
 import { useDraggable } from '@dnd-kit/core';
-import { toHex } from '../utils';
+import { toRGB } from '../utils';
 
 // eslint-disable-next-line react/prop-types
 export function OvertimePreset({ name, description }) {
@@ -14,7 +14,7 @@ export function OvertimePreset({ name, description }) {
   return (
     <div className='ot-preset' ref={setNodeRef} style={style} {...listeners} {...attributes}>
       <div className="name">
-        <span className="circle" style={{ backgroundColor: toHex(name) }}></span>
+        <span className="circle" style={{ backgroundColor: toRGB(name) }}></span>
         <span>{name}</span>
       </div>
       <div className="description">

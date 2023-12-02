@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useDroppable } from '@dnd-kit/core';
+import { toRGB } from '../utils';
 
 export function OvertimeCalculator({ items, setOtItems }) {
   const { isOver, setNodeRef } = useDroppable({
@@ -22,8 +23,8 @@ export function OvertimeCalculator({ items, setOtItems }) {
 
   return (
     <div className='ot-calculation-list' ref={setNodeRef} style={style}>
-      {items.map(item => <div key={item.id}>
-        <div><button onClick={() => removeItem(item)}>X</button> {item.type}</div>
+      {items.map(item => <div className='ot-item' key={item.id} >
+        <div style={{ backgroundColor: toRGB(item.type, 0.32) }}><button onClick={() => removeItem(item)}>X</button> {item.type}</div>
         <div>
           <input type="number" value={item.hours} onChange={(ev) => updateItem(item, parseInt(ev.target.value))} step={1} min={0} />
         </div>
