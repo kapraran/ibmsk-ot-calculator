@@ -1,5 +1,52 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   padding: 0;
   margin: 0;
   font-family: sans-serif;
+}
+
+header {
+  display: flex;
+}
+
+main {
+  display: flex;
+}
+
+.input-group input {
+  display: block;
+}
+
+.ot-preset-list {
+  padding: 16px;
+  margin: 16px;
+  border: 1px solid #ccc;
+  min-width: 200px;
+}
+
+.ot-calculation-list {
+  padding: 16px;
+  margin: 16px;
+  border: 1px solid #000;
+  min-width: 200px;
+}
+
+.ot-preset {
+  padding: 16px;
+  background-color: #eee;
+  margin-bottom: 8px;
+  user-select: none;
+}
+
+.ot-preset .name {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.ot-preset .description {
+  font-size: 12px;
 }
