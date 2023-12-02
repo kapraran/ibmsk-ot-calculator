@@ -49,9 +49,21 @@ function App() {
       <h1 className="repo-title">ibmsk-ot-calculator</h1>
 
       <header>
-        <InputGroup name="Gross salary" value={grossSalary} setValue={setGrossSalary} />
-        <InputGroup name="Hourly gross salary" value={hourlyRate} setValue={setHourlyRate} />
-        <InputGroup name="Minimum hourly rate" value={minimumHourlyRate} setValue={setMinimumHourlyRate} />
+        <InputGroup
+          name="Gross salary"
+          value={grossSalary}
+          setValue={setGrossSalary}
+        />
+        <InputGroup
+          name="Hourly gross salary"
+          value={hourlyRate}
+          setValue={setHourlyRate}
+        />
+        <InputGroup
+          name="Minimum hourly rate"
+          value={minimumHourlyRate}
+          setValue={setMinimumHourlyRate}
+        />
       </header>
 
       <div className="total-amount">
@@ -74,7 +86,12 @@ function App() {
           ))}
         </div>
 
-        <OvertimeCalculator items={otItems} setOtItems={setOtItems} />
+        <OvertimeCalculator
+          items={otItems}
+          setOtItems={setOtItems}
+          hourlyRate={hourlyRate}
+          minimumHourlyRate={minimumHourlyRate}
+        />
       </main>
     </DndContext>
   );
